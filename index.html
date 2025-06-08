@@ -255,6 +255,9 @@
   document.getElementById('contact-form').addEventListener('submit', async function(e) {
   e.preventDefault();
 
+  // Show loader
+  document.getElementById('loader-overlay').style.display = 'flex';
+
   const data = {
     firstName: document.getElementById('first-name').value,
     lastName: document.getElementById('last-name').value,
@@ -271,13 +274,20 @@
     });
 
     const result = await response.json();
+
+    // Redirect to thank you page
     window.location.href = "thankyou.html";
+
   } catch (err) {
     alert("There was an error. Please try again.");
+    document.getElementById('loader-overlay').style.display = 'none'; // hide loader on error
   }
 });
 
-</script>
 
+</script>
+<div id="loader-overlay">
+  <div class="spinner"></div>
+</div>
 </body>
 </html>
