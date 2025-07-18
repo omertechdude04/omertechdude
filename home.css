@@ -416,142 +416,113 @@ main {
 
 /* Contact Section */
 #contact {
-  padding: 80px 20px;
-  color: #ffffff;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Section Heading */
-#contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #00bfff;
-}
-
-/* Contact Form Styling */
-#contact form {
-  max-width: 800px;
-  margin: 0 auto 50px;
-  padding: 40px;
+  background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  padding: 50px 20px;
   border-radius: 16px;
-  background: black;
-  backdrop-filter: blur(10px);
-  border: 2px solid white;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  text-align: left;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
 }
 
-/* Input Fields */
-#contact form input[type="text"],
-#contact form input[type="email"],
-#contact form textarea {
-  width: 100%;
-  padding: 14px 16px;
-  margin-top: 8px;
-  margin-bottom: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 8px;
-  color: #ffffff;
+#contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00eaff;
+  margin-bottom: 30px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  padding: 12px 15px;
   font-size: 1rem;
+  border: 2px solid #00eaff;
+  border-radius: 10px;
+  background-color: #1c1c2b;
+  color: #fff;
+  transition: border-color 0.3s ease;
 }
 
-#contact form input::placeholder,
-#contact form textarea::placeholder {
-  color: #cccccc;
-}
-
-#contact form input:focus,
-#contact form textarea:focus {
-  outline: 2px solid #00bfff;
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* Labels */
-#contact form label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 6px;
-  color: #ffffff;
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #00c6ff;
 }
 
 /* Radio Buttons */
-#contact form p {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #ffffff;
+input[type="radio"] {
+  margin-right: 6px;
 }
 
-#contact form input[type="radio"] {
-  margin-right: 8px;
-  accent-color: #00bfff;
-}
-
-#contact form label[for="starter"],
-#contact form label[for="pro"],
-#contact form label[for="ultimate"] {
-  display: inline-block;
-  margin-right: 20px;
-  font-weight: 500;
-  color: #cccccc;
-}
-
-/* Textarea */
-#contact form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-#contact form button[type="submit"] {
-  width: 50%;
-  padding: 14px;
-  margin: 20px auto 0; 
-  display: block;
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: white;
+button[type="submit"] {
+  background: linear-gradient(to right, #00eaff, #007bff);
+  color: #000;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
 }
 
-
-#contact form button[type="submit"]:hover {
-  background-color: white;
-  color: black;
-  border: 2px solid black;
+button[type="submit"]:hover {
+  background: linear-gradient(to right, #00c6ff, #0056b3);
+  transform: translateY(-2px);
 }
 
-/* Contact Buttons */
+/* Contact Buttons Row */
 .contact-buttons-row {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 30px;
 }
 
 .contact-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   padding: 12px 20px;
-  background-color: #ffffff;
-  color: #000000;
-  border-radius: 10px;
+  background-color: #00eaff;
+  color: #000;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .contact-btn:hover {
-  background-color: black;
-  transform: translateY(-2px);
-  color: white;
+  background-color: #00c6ff;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 600px) {
+  #contact {
+    padding: 30px 15px;
+  }
+
+  .contact-btn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  form {
+    gap: 12px;
+  }
 }
 
 
