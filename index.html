@@ -193,33 +193,58 @@
 
 
 
-  <!-- Contact -->
-<form action="https://formsubmit.co/omertechdude@gmail.com" method="POST">
-  <input type="text" name="_honey" style="display:none">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://omertechdude.github.io/thankyou.html">
-  <label for="first-name">First Name:</label><br>
-  <input type="text" id="first-name" name="First Name" required><br><br>
-  <label for="last-name">Last Name:</label><br>
-  <input type="text" id="last-name" name="Last Name" required><br><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="Email" required><br><br>
+<section id="contact" class="info">
+  <h2>Contact Me</h2>
 
-  <p>Choose a package:</p>
-  <input type="radio" id="starter" name="Package" value="Starter" required>
-  <label for="starter">Starter</label><br>
+  <form action="https://formsubmit.co/omertechdude@gmail.com" method="POST">
+    <!-- Anti-spam honeypot -->
+    <input type="text" name="_honey" style="display:none">
 
-  <input type="radio" id="pro" name="Package" value="Pro">
-  <label for="pro">Pro</label><br>
+    <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
 
-  <input type="radio" id="ultimate" name="Package" value="Ultimate">
-  <label for="ultimate">Ultimate</label><br><br>
+    <!-- Redirect to your custom thank you page -->
+    <input type="hidden" name="_next" value="https://omertechdude.github.io/thankyou.html">
 
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="Message" rows="5" required></textarea><br><br>
+    <!-- Form Fields -->
+    <label for="first-name">First Name:</label><br>
+    <input type="text" id="first-name" name="First Name" required><br><br>
 
-  <button type="submit">Submit</button>
-</form>
+    <label for="last-name">Last Name:</label><br>
+    <input type="text" id="last-name" name="Last Name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="Email" required><br><br>
+
+    <p>Choose a package:</p>
+    <input type="radio" id="starter" name="Package" value="Starter" required>
+    <label for="starter">Starter</label><br>
+
+    <input type="radio" id="pro" name="Package" value="Pro">
+    <label for="pro">Pro</label><br>
+
+    <input type="radio" id="ultimate" name="Package" value="Ultimate">
+    <label for="ultimate">Ultimate</label><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="Message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="contact-buttons-row">
+    <a href="mailto:omertechdude@gmail.com" class="contact-btn" target="_blank">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+    <a href="https://wa.me/5203015742" class="contact-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://github.com/omertechdude04" class="contact-btn" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</section>
+
 
 
   <div class="contact-buttons-row">
