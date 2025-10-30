@@ -1,0 +1,144 @@
+.about {
+  background: linear-gradient(180deg, #0a0a0a, #050505);
+  color: #fff;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+  width: 99.5vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.about-inner {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.about-line {
+  width: 80px;
+  height: 4px;
+  background: #00aaff;
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.highlight {
+  color: #00aaff;
+  font-weight: 600;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-card {
+  background: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.1);
+  border: 1px solid #1c1c1c;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 170, 255, 0.2);
+}
+
+.about-card h3 {
+  color: #00aaff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-card p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.about-closing {
+  font-size: 1.1rem;
+  color: #bbb;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Responsive for tablets and small laptops */
+@media (max-width: 900px) {
+  .about-title {
+    font-size: 2.4rem;
+  }
+
+  .about-intro {
+    font-size: 1.15rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+  }
+
+  .about-closing {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive for phones */
+@media (max-width: 600px) {
+  .about {
+    padding: 4rem 1rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+  }
+
+  .about-closing {
+    font-size: 0.95rem;
+  }
+}

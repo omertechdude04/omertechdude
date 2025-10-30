@@ -1,0 +1,197 @@
+.pricing-section {
+  background: radial-gradient(circle at top, #0a0a0a, #050505);
+  color: #fff;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  width: 99.5vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+}
+
+.pricing-container {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.pricing-subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Card Styles */
+.pricing-card {
+  background: #111;
+  border: 1px solid #1c1c1c;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.05);
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.25);
+}
+
+.popular {
+  background: linear-gradient(145deg, #0a0a0a 20%, #0d1b2a 100%);
+  border: 1px solid #00aaff;
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.2);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  background: #00aaff;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plan-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.plan-price {
+  font-size: 1.3rem;
+  color: #00aaff;
+  margin-bottom: 1rem;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.plan-features li {
+  color: #ccc;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.plan-note {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 1.8rem;
+}
+
+.plan-button {
+  display: inline-block;
+  background: #00aaff;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.plan-button:hover {
+  background: #0088cc;
+  transform: scale(1.05);
+}
+
+/* Responsive for tablets and small laptops */
+@media (max-width: 900px) {
+  .pricing-title {
+    font-size: 2.4rem;
+  }
+
+  .pricing-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .plan-title {
+    font-size: 1.5rem;
+  }
+
+  .plan-price {
+    font-size: 1.2rem;
+  }
+
+  .plan-features li {
+    font-size: 0.95rem;
+  }
+
+  .plan-note {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive for phones */
+@media (max-width: 600px) {
+  .pricing-section {
+    padding: 4rem 1rem;
+  }
+
+  .pricing-title {
+    font-size: 2rem;
+  }
+
+  .pricing-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pricing-card {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .plan-title {
+    font-size: 1.3rem;
+  }
+
+  .plan-price {
+    font-size: 1.1rem;
+  }
+
+  .plan-features li {
+    font-size: 0.95rem;
+  }
+
+  .plan-note {
+    font-size: 0.85rem;
+  }
+
+  .plan-button {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.95rem;
+  }
+
+  .popular-badge {
+    font-size: 0.75rem;
+    top: -10px;
+    right: 12px;
+  }
+}

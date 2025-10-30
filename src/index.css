@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom styles for project cards */
+.project-card {
+  @apply bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl;
+}
+
+.project-card img {
+  @apply w-full h-64 object-contain; /* Larger, non-compressed images */
+}
+
+.project-card h3 {
+  @apply text-2xl font-semibold text-gray-800 mb-3;
+}
+
+.project-card p {
+  @apply text-gray-600 leading-relaxed;
+}
+
+/* Header logo */
+.logo {
+  @apply h-10 max-h-10 w-auto max-w-[150px] object-contain transition-transform duration-300 hover:scale-105; /* Smaller, constrained logo */
+}
+
+/* Header */
+.header-container {
+  @apply container mx-auto px-4 flex justify-between items-center h-16; /* Fixed height for header */
+}
+
+.header-nav {
+  @apply flex space-x-6 items-center;
+}
+
+.header-nav a {
+  @apply text-white hover:text-blue-400 transition-colors text-base;
+}
+
+/* Hero section */
+.hero-section {
+  @apply relative;
+}
+
+.hero-section img {
+  @apply w-full h-[28rem] object-cover;
+}
+
+.hero-overlay {
+  @apply absolute inset-0 bg-white bg-opacity-60;
+}
+
+.hero-content {
+  @apply absolute inset-0 flex flex-col items-center justify-center text-white text-center;
+}
+
+.hero-content h1 {
+  @apply text-5xl md:text-7xl font-bold mb-6 tracking-tight;
+}
+
+.hero-content p {
+  @apply text-xl md:text-2xl mb-8 max-w-2xl;
+}
+
+/* Section headings */
+.section-heading {
+  @apply text-4xl font-bold text-center mb-8 text-gray-800;
+}
+
+/* Contact form inputs */
+.form-input {
+  @apply w-full border-2 border-gray-300 rounded-lg px-4 py-3 mt-2 focus:outline-none focus:border-blue-500 transition-colors;
+}
+
+.form-textarea {
+  @apply w-full border-2 border-gray-300 rounded-lg px-4 py-3 mt-2 focus:outline-none focus:border-blue-500 transition-colors resize-none;
+}
+
+.contact-button {
+  @apply bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors;
+}
+
+/* Footer */
+.footer-nav a {
+  @apply mx-3 text-gray-300 hover:text-blue-400 transition-colors;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    @apply flex-col items-center py-4;
+  }
+  .header-nav {
+    @apply mt-4 flex-col space-y-2;
+  }
+  .header-nav a {
+    @apply text-sm;
+  }
+  .logo {
+    @apply h-8 max-w-[120px];
+  }
+}

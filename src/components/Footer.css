@@ -1,0 +1,145 @@
+/* ================= FOOTER BASE ================= */
+.footer {
+  background: linear-gradient(180deg, #000, #0a0a0a);
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1rem;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* subtle floating light animation */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.04), transparent 70%);
+  animation: subtleLight 12s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes subtleLight {
+  0% { transform: translate(0, 0); opacity: 0.3; }
+  100% { transform: translate(40px, 40px); opacity: 0.6; }
+}
+
+/* ================= CONTAINER ================= */
+.footer-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================= NAV LINKS ================= */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.footer-nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ddd;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* soft underline animation */
+.footer-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 1.5px;
+  background: #fff;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+/* ================= DIVIDER ================= */
+.footer-divider {
+  height: 1px;
+  width: 60%;
+  margin: 1rem auto 2rem;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* ================= COPYRIGHT TEXT ================= */
+.footer-copy {
+  font-size: 0.95rem;
+  color: #bbb;
+  letter-spacing: 0.4px;
+}
+
+.footer-copy span {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.footer-copy span:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .footer-nav {
+    gap: 1.5rem;
+  }
+
+  .footer-copy {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 2.5rem 1rem;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.95rem;
+  }
+
+  .footer-divider {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+    padding: 0 1rem;
+  }
+}
